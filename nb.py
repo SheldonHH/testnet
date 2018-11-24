@@ -24,8 +24,11 @@ systemAccounts = [
     'eosio.ramfee',
     'eosio.saving',
     'eosio.stake',
-    'eosio.token',
+    'eosio.token', # for BOS indeed
     'eosio.vpay',
+    'eosio.btc',
+    'eosio.eth',
+    'eosio.eos',
     'bos.pegtoken',
 ]
 
@@ -136,15 +139,19 @@ def createSystemAccounts():
     for a in systemAccounts:
         run(args.cleos + 'create account eosio ' + a + ' ' + args.public_key)
 
+def intToCurrency(i):
+    return '%d.%04d %s' % (i // 10000, i % 10000, args.coresymbol)       
+
 def intToEOS(i):
     return '%d.%04d %s' % (i // 10000, i % 10000, args.eossymbol)
 
 def intToETH(i):   
-    return '%d.%04d %s' % (i // 10000, i % 10000, args.ethsymbol)
+    return '%d.%08d %s' % (i // 100000000, i % 100000000, args.ethsymbol)
 
 def intToBTC(i):   
-    return '%d.%04d %s' % (i // 10000, i % 10000, args.btcsymbol)
+    return '%d.%08d %s' % (i // 100000000, i % 100000000, args.btcsymbol)
 
+# sys token
 def allocateFunds(b, e):
     print("args.min_producer_funds: ", args.min_producer_funds)
     dist = numpy.random.pareto(1.161, e - b).tolist() # 1.161 = 80/20 rule
@@ -160,6 +167,51 @@ def allocateFunds(b, e):
         accounts[i]['funds'] = funds
     return total
 
+def allocateBTCs(b, e):
+    print("args.min_producer_funds: ", args.min_producer_funds)
+    dist = numpy.random.pareto(1.161, e - b).tolist() # 1.161 = 80/20 rule
+    dist.sort()
+    dist.reverse()
+    factor = 17_400_000 / sum(dist)         # https://www.blockchain.com/charts/total-bitcoins
+    total = 0
+    for i in range(b, e):
+        funds = round(factor * dist[i - b] * 100000000)
+        if i >= firstProducer and i < firstProducer + numProducers:
+            funds = max(funds, round(args.min_producer_funds * 100000000))
+        total += funds
+        accounts[i]['btcs'] = funds
+    return total
+
+def allocateETHs(b, e):
+    print("args.min_producer_funds: ", args.min_producer_funds)
+    dist = numpy.random.pareto(1.161, e - b).tolist() # 1.161 = 80/20 rule
+    dist.sort()
+    dist.reverse()
+    factor = 104_000_000 / sum(dist)        # https://etherscan.io/stat/supply
+    total = 0
+    for i in range(b, e):
+        funds = round(factor * dist[i - b] * 100000000)
+        if i >= firstProducer and i < firstProducer + numProducers:
+            funds = max(funds, round(args.min_producer_funds * 100000000))
+        total += funds
+        accounts[i]['eths'] = funds
+    return total
+
+def allocateEOSs(b, e):
+    print("args.min_producer_funds: ", args.min_producer_funds)
+    dist = numpy.random.pareto(1.161, e - b).tolist() # 1.161 = 80/20 rule
+    dist.sort()
+    dist.reverse()
+    factor = 1_000_000_000 / sum(dist)
+    total = 0
+    for i in range(b, e):
+        funds = round(factor * dist[i - b] * 10000)
+        if i >= firstProducer and i < firstProducer + numProducers:
+            funds = max(funds, round(args.min_producer_funds * 10000))
+        total += funds
+        accounts[i]['eoss'] = funds
+    return total
+
 def createStakedAccounts(b, e):
     ramFunds = round(args.ram_funds * 10000)
     configuredMinStake = round(args.min_stake * 10000)
@@ -167,8 +219,12 @@ def createStakedAccounts(b, e):
     for i in range(b, e):
         a = accounts[i]
         funds = a['funds']
+        # retry(args.cleos + 'transfer huobipeggeos %s "%s"' % (a['name'], intToEOS(eoss)))
+        # retry(args.cleos + 'transfer huobipeggeth %s "%s"' % (a['name'], intToETH(eths)))
+        # retry(args.cleos + 'transfer huobipeggbtc %s "%s"' % (a['name'], intToBTC(btcs))) 
+        
         print('#' * 80)
-        print('# %d/%d %s %s' % (i, e, a['name'], intToEOS(funds)))
+        print('# %d/%d %s %s' % (i, e, a['name'], intToCurrency(funds)))
         print('#' * 80)
         if funds < ramFunds:
             print('skipping %s: not enough funds to cover ram' % a['name'])
@@ -178,19 +234,14 @@ def createStakedAccounts(b, e):
         stake = funds - ramFunds - unstaked
         stakeNet = round(stake / 2)
         stakeCpu = stake - stakeNet
-        print('%s: total funds=%s, ram=%s, net=%s, cpu=%s, unstaked=%s' % (a['name'], intToEOS(a['funds']), intToEOS(ramFunds), intToEOS(stakeNet), intToEOS(stakeCpu), intToEOS(unstaked)))
+        print('%s: total funds=%s, ram=%s, net=%s, cpu=%s, unstaked=%s' % (a['name'], intToCurrency(a['funds']), intToCurrency(ramFunds), intToCurrency(stakeNet), intToCurrency(stakeCpu), intToCurrency(unstaked)))
         assert(funds == ramFunds + stakeNet + stakeCpu + unstaked)
         retry(args.cleos + 'system newaccount --transfer eosio %s %s --stake-net "%s" --stake-cpu "%s" --buy-ram "%s"   ' % 
-            (a['name'], a['pub'], intToEOS(stakeNet), intToEOS(stakeCpu), intToEOS(ramFunds)))
-        retry(args.cleos + 'push action ')
-        retry(args.cleos + 'system newaccount --transfer bos.pegtoken %s %s --stake-net "%s" --stake-cpu "%s" --buy-ram "%s"   ' % 
-            (a['name'], a['pub'], intToETH(stakeNet), intToETH(stakeCpu), intToETH(ramFunds)))
-        retry(args.cleos + 'system newaccount --transfer bos.pegtoken %s %s --stake-net "%s" --stake-cpu "%s" --buy-ram "%s"   ' % 
-            (a['name'], a['pub'], intToBTC(stakeNet), intToBTC(stakeCpu), intToBTC(ramFunds)))
+            (a['name'], a['pub'], intToCurrency(stakeNet), intToCurrency(stakeCpu), intToCurrency(ramFunds)))
         if unstaked:
-            retry(args.cleos + 'transfer bos.pegtoken %s "%s"' % (a['name'], intToEOS(unstaked)))
-            retry(args.cleos + 'transfer bos.pegtoken %s "%s"' % (a['name'], intToETH(unstaked)))
-            retry(args.cleos + 'transfer bos.pegtoken %s "%s"' % (a['name'], intToETH(unstaked)))
+            retry(args.cleos + 'transfer eosio %s "%s"' % (a['name'], intToCurrency(unstaked)))
+       
+
 
 def regProducers(b, e):
     for i in range(b, e):
@@ -301,23 +352,32 @@ def stepStartBoot():
     sleep(1.5)
 def stepInstallSystemContracts():
     run(args.cleos + 'set contract eosio.token ' + args.contracts_dir + 'eosio.token/')
-    run(args.cleos + 'set contract bos.pegtoken ' + args.contracts_dir + 'eosio.token/')
     run(args.cleos + 'set contract eosio.msig ' + args.contracts_dir + 'eosio.msig/')
+    # set pegged contracts
+    run(args.cleos + 'set contract eosio.eos ' + args.contracts_dir + 'bos.pegtoken/')
+    run(args.cleos + 'set contract eosio.btc ' + args.contracts_dir + 'bos.pegtoken/')
+    run(args.cleos + 'set contract eosio.eth ' + args.contracts_dir + 'bos.pegtoken/')
+    run(args.cleos + 'push action eosio.eos init \'["4,EOS", "repeatable"] \'  -p eosio.eos')
+    run(args.cleos + 'push action eosio.eth init \'["8,ETH", "non-repeatable"] \'  -p eosio.eth')
+    run(args.cleos + 'push action eosio.btc init \'["8,BTC", "non-repeatable"] \'  -p eosio.btc')
 def stepCreateTokens():
 #    run(args.cleos + 'push action eosio.token create \'["eosio", "10000000000.0000 EOS"]\' -p eosio.token' )
-    run(args.cleos + 'push action bos.pegtoken create \'["eosio", "120000000.0000 %s"]\' -p bos.pegtoken' % (args.eossymbol))
-    run(args.cleos + 'push action bos.pegtoken create \'["eosio", "120000000.0000 %s"]\' -p bos.pegtoken' % (args.ethsymbol))
-    run(args.cleos + 'push action bos.pegtoken create \'["eosio", "21000000.0000 %s"]\' -p bos.pegtoken' % (args.btcsymbol))
+    # run(args.cleos + 'push action eosio.eos create \'["huobipeggeos", "10000000000.0000 EOSHB", "Huobi", "https://www.huobi.com", "", "", "", ""] \' -p eosio.eos')
+    # run(args.cleos + 'push action eosio.eth create \'["huobipeggeth", "120000000.00000000 ETHHB", "Huobi", "https://www.huobi.com", "", "", "", ""] \' -p eosio.eth')
+    # run(args.cleos + 'push action eosio.btc create \'["huobipeggbtc", "21000000.00000000 BTCHB", "Huobi", "https://www.huobi.com", "", "", "", ""] \' -p eosio.btc')
+    run(args.cleos + 'push action eosio.eos create \'["eosio", "10000000000.0000 EOSHB", "Huobi", "https://www.huobi.com", "", "", "", ""] \' -p eosio.eos')
+    run(args.cleos + 'push action eosio.eth create \'["eosio", "120000000.00000000 ETHHB", "Huobi", "https://www.huobi.com", "", "", "", ""] \' -p eosio.eth')
+    run(args.cleos + 'push action eosio.btc create \'["eosio", "21000000.00000000 BTCHB", "Huobi", "https://www.huobi.com", "", "", "", ""] \' -p eosio.btc')
+
     run(args.cleos + 'push action eosio.token create \'["eosio", "10000000000.0000 BOS"]\' -p eosio.token' )
+    run(args.cleos + 'push action eosio.token create \'["eosio", "10000000000.0000 EOS"]\' -p eosio.token' )
 
-
-    run(args.cleos + 'push action eosio.token create \'["eosio", "10000000000.0000 %s"]\' -p eosio.token' % (args.eossymbol))
-#    run(args.cleos + 'push action eosio.token issue \'["eosio", "100000000.0000 BOS", "memo"]\' -p eosio' )
-#    run(args.cleos + 'push action eosio.token issue \'["eosio", "900000000 BOS", "memo"]\' -p eosio' )
     totalAllocation = allocateFunds(0, len(accounts))
     print('totalAllocation: ',  totalAllocation)
-    run(args.cleos + 'push action eosio.token issue \'["eosio", "%s", "memo"]\' -p eosio' % intToEOS(totalAllocation))
+    run(args.cleos + 'push action eosio.token issue \'["eosio", "%s", "memo"]\' -p eosio' % intToCurrency(totalAllocation))              # SYS
+
     sleep(1)
+
 def stepSetSystemContract():
     retry(args.cleos + 'set contract eosio ' + args.contracts_dir + 'eosio.system/')
     sleep(1)
@@ -326,6 +386,29 @@ def stepCreateStakedAccounts():
     createStakedAccounts(0, len(accounts))
     run(args.cleos + 'push action eosio.token issue \'["bosbosbosbos", "100000000.0000 BOS", "memo"]\' -p eosio' )
     run(args.cleos + 'push action eosio.token issue \'["bosissuances", "900000000.0000 BOS", "memo"]\' -p eosio' )
+    issuePeggedTokens(0, len(accounts))
+
+def issuePeggedTokens(b,e):
+    totalEOSsAllocation = allocateEOSs(0, len(accounts))
+    totalETHsAllocation = allocateETHs(0, len(accounts))
+    totalBTCsAllocation = allocateBTCs(0, len(accounts))
+    # run(args.cleos + 'push action eosio.eos issue \'["huobipeggeos", "%s", "memo"]\' -p huobipeggeos' % intToEOS(totalEOSsAllocation)) 
+    # run(args.cleos + 'push action eosio.eth issue \'["huobipeggeth", "%s", "memo"]\' -p huobipeggeth' % intToETH(totalETHsAllocation))
+    # run(args.cleos + 'push action eosio.btc issue \'["huobipeggbtc", "%s", "memo"]\' -p huobipeggbtc' % intToBTC(totalBTCsAllocation))
+    run(args.cleos + 'push action eosio.eos issue \'["huobipeggeos", "%s", "memo"]\' -p eosio' % intToEOS(totalEOSsAllocation)) 
+    run(args.cleos + 'push action eosio.eth issue \'["huobipeggeth", "%s", "memo"]\' -p eosio' % intToETH(totalETHsAllocation))
+    run(args.cleos + 'push action eosio.btc issue \'["huobipeggbtc", "%s", "memo"]\' -p eosio' % intToBTC(totalBTCsAllocation))
+    
+    for i in range(b, e):
+        a = accounts[i]
+        btcs = a['btcs']
+        eths = a['eths']
+        eoss = a['eoss']
+        # run(args.cleos + ' push action eosio.eos transfer \'["huobipeggeos", "%s", "%s", "memo"] \' -p huobipeggeos' % (a['name'], intToEOS(eoss)))
+        # run(args.cleos + ' push action eosio.eth transfer \'["huobipeggeth", "%s", "%s", "memo"] \' -p huobipeggeth' % (a['name'], intToETH(eths)))
+        # run(args.cleos + ' push action eosio.btc transfer \'["huobipeggbtc", "%s", "%s", "memo"] \' -p huobipeggbtc' % (a['name'], intToBTC(btcs)))     
+
+      
 def stepRegProducers():
     regProducers(firstProducer, firstProducer + numProducers)
     sleep(1)
@@ -384,9 +467,10 @@ parser.add_argument('--nodes-dir', metavar='', help="Path to nodes directory", d
 parser.add_argument('--genesis', metavar='', help="Path to genesis.json", default="./genesis.json")
 parser.add_argument('--wallet-dir', metavar='', help="Path to wallet directory", default='./wallet/')
 parser.add_argument('--log-path', metavar='', help="Path to log file", default='./output.log')
-parser.add_argument('--eossymbol', metavar='', help="The pegged EOS symbol", default='EOS')
-parser.add_argument('--ethsymbol', metavar='', help="The pegged ETH symbol", default='ETH')
-parser.add_argument('--btcsymbol', metavar='', help="The pegged BTC symbol", default='BTC')
+parser.add_argument('--coresymbol', metavar='', help="The eosio.system symbol", default='EOS')
+parser.add_argument('--eossymbol', metavar='', help="The pegged EOS symbol", default='EOSHB')
+parser.add_argument('--ethsymbol', metavar='', help="The pegged ETH symbol", default='ETHHB')
+parser.add_argument('--btcsymbol', metavar='', help="The pegged BTC symbol", default='BTCHB')
 parser.add_argument('--user-limit', metavar='', help="Max number of users. (0 = no limit)", type=int, default=3000)
 parser.add_argument('--max-user-keys', metavar='', help="Maximum user keys to import into wallet", type=int, default=10)
 parser.add_argument('--ram-funds', metavar='', help="How much funds for each user to spend on ram", type=float, default=0.1)

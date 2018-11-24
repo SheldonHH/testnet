@@ -55,7 +55,8 @@
         {"name":"eoshenzhenio", "pvt":"5HqyipkJSm5fwYhbhGC3vmmoBwabtgJSPecnvmN2mMrCTQfWBSS", "pub":"EOS8UkmsnCo4GxDihbKwgoZY6f2QLSMEqBZ2frGLckxrCHrz15r7X"},
 	{"name":"bosbosbosbos", "pvt":"5KVXyyDUqponoRbG87zMevXhwMcCtjEoNSTqsVDWUfJDswQ6BGq", "pub":"EOS7s7tw3HuoMeqFzcC6VK99RnZJhf66rWfGa1F6EoBDkfWXUUso4"},
 	{"name":"bosissuances", "pvt":"5K7wm48NKHsLazUiPM8fRNGDQG2L25iUXNUcTzx2VtYcVSnF1rt", "pub":"EOS5iYbCAdhtdZRSvfD8w3ZhcCZf8GArpNvFyCwg8KjYvsostjtyw"},
-	{"name":"huobipegcoin", "pvt":"5JLKBpyGNq2PxjmGTHjZwqHoyRejQ6X6PzdfgysYuWQFzj62DAz", "pub":"EOS7JSCYjJsXrGoBonccHEm38WsPYnjBeeTDzszszDTTG6t6j7jAZ"}
-
+	{"name":"huobipeggeos", "pvt":"5KYKVhGxW3oSVRNUmfCBLwjssZNf7jtWftho76SCvgEftdCuCKV", "pub":"EOS7A8j8w7RwKQNoNPLnGnJmNX49vNkTkDkuNio3ndqB5GpqxBPLw"},
+	{"name":"huobipeggeth", "pvt":"5K6oTVBsCRHTwPtv7mHyw88HGG6HR5WdhRqr1JVsfzXkrxz9Prz", "pub":"EOS5vmTiyU2xhrbySpguSeVyHWc9spKRvYXqDkYnkkynK6A1UGKF3"},
+	{"name":"huobipeggbtc", "pvt":"5KZyLeoiyxehue45z2o5SrMfme3jCWGfuvHqsqwF1EMV2CNFtiS", "pub":"EOS5PqJUhhSd5jyMhww1jYAcTz6E3gs8HcbgiKTHHGwRsDRR5Ycjf"}
     ]
 }

@@ -84,6 +84,7 @@ def importKeys():
     run(args.cleos + 'wallet import --private-key ' + args.private_key)
     keys = {}
     for a in accounts:
+        print('a:', a)
         key = a['pvt']
         if not key in keys:
             if len(keys) >= args.max_user_keys:
@@ -92,6 +93,7 @@ def importKeys():
             run(args.cleos + 'wallet import --private-key ' + key)
     for i in range(firstProducer, firstProducer + numProducers):
         a = accounts[i]
+        print('ap:', a)
         key = a['pvt']
         if not key in keys:
             keys[key] = True
@@ -404,9 +406,12 @@ def issuePeggedTokens(b,e):
         btcs = a['btcs']
         eths = a['eths']
         eoss = a['eoss']
-        # run(args.cleos + ' push action eosio.eos transfer \'["huobipeggeos", "%s", "%s", "memo"] \' -p huobipeggeos' % (a['name'], intToEOS(eoss)))
-        # run(args.cleos + ' push action eosio.eth transfer \'["huobipeggeth", "%s", "%s", "memo"] \' -p huobipeggeth' % (a['name'], intToETH(eths)))
-        # run(args.cleos + ' push action eosio.btc transfer \'["huobipeggbtc", "%s", "%s", "memo"] \' -p huobipeggbtc' % (a['name'], intToBTC(btcs)))     
+        if (a['name'] == 'huobipeggeos' or a['name'] == 'huobipeggeth' or a['name'] == 'huobipeggbtc'):
+            print('no need to transfer to pegged accounts')
+        else:
+            retry(args.cleos + ' push action eosio.eos transfer \'["huobipeggeos", "%s", "%s", "memo"] \' -p huobipeggeos' % (a['name'], intToEOS(eoss)))
+            retry(args.cleos + ' push action eosio.eth transfer \'["huobipeggeth", "%s", "%s", "memo"] \' -p huobipeggeth' % (a['name'], intToETH(eths)))
+            retry(args.cleos + ' push action eosio.btc transfer \'["huobipeggbtc", "%s", "%s", "memo"] \' -p huobipeggbtc' % (a['name'], intToBTC(btcs)))     
 
       
 def stepRegProducers():
@@ -472,9 +477,9 @@ parser.add_argument('--eossymbol', metavar='', help="The pegged EOS symbol", def
 parser.add_argument('--ethsymbol', metavar='', help="The pegged ETH symbol", default='ETHHB')
 parser.add_argument('--btcsymbol', metavar='', help="The pegged BTC symbol", default='BTCHB')
 parser.add_argument('--user-limit', metavar='', help="Max number of users. (0 = no limit)", type=int, default=3000)
-parser.add_argument('--max-user-keys', metavar='', help="Maximum user keys to import into wallet", type=int, default=10)
-parser.add_argument('--ram-funds', metavar='', help="How much funds for each user to spend on ram", type=float, default=0.1)
-parser.add_argument('--min-stake', metavar='', help="Minimum stake before allocating unstaked funds", type=float, default=0.9)
+parser.add_argument('--max-user-keys', metavar='', help="Maximum user keys to import into wallet", type=int, default=20)
+parser.add_argument('--ram-funds', metavar='', help="How much funds for each user to spend on ram", type=float, default=0.5)
+parser.add_argument('--min-stake', metavar='', help="Minimum stake before allocating unstaked funds", type=float, default=0.5)
 parser.add_argument('--max-unstaked', metavar='', help="Maximum unstaked funds", type=float, default=10)
 parser.add_argument('--producer-limit', metavar='', help="Maximum number of producers. (0 = no limit)", type=int, default=0)
 parser.add_argument('--min-producer-funds', metavar='', help="Minimum producer funds", type=float, default=1000.0000)
@@ -504,6 +509,8 @@ logFile.write('\n\n' + '*' * 80 + '\n\n\n')
 
 with open('baccounts.json') as f:
     a = json.load(f)
+    print('args.user_limit', args.user_limit)
+    print('args.producer_limit', args.producer_limit)
     if args.user_limit:
         del a['users'][args.user_limit:]
     if args.producer_limit:
@@ -511,6 +518,8 @@ with open('baccounts.json') as f:
     firstProducer = len(a['users'])
     numProducers = len(a['producers'])
     accounts = a['users'] + a['producers']
+    print('firstProducer', firstProducer)
+
 
 maxClients = numProducers + 10
 

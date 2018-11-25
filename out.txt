@@ -1,0 +1,1132 @@
+Creating wallet: default
+Save password to use in the future to unlock this wallet.
+Without password imported keys will not be retrievable.
+"PW5K1hrbC3LrD8rhJ8CsEw6ixp7k9cJTTS8zSv6ZXv62rjYRMonxW"
+imported private key for: EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr
+imported private key for: EOS69X3383RzBZj41k73CSjUNXM5MYGpnDxyPnWUKPEtYQmTBWz4D
+imported private key for: EOS7yBtksm8Kkg85r4in4uCbfN77uRwe82apM8jjbhFVDgEgz3w8S
+imported private key for: EOS7WnhaKwHpbSidYuh2DF1qAExTRUtPEdZCaZqt75cKcixuQUtdA
+imported private key for: EOS7Bn1YDeZ18w2N9DU4KAJxZDt6hk3L7eUwFRAc1hb5bp6xJwxNV
+imported private key for: EOS5vs19cixeVh2LJ61moQwTSgeGBVj8rZqjE36tAXXF4tFcGdCJw
+imported private key for: EOS6cNcTC6WTFkKV4C8DoxcTXdDTDKvj3vgZEVDGVFckK1eTNJQtf
+imported private key for: EOS8UkmsnCo4GxDihbKwgoZY6f2QLSMEqBZ2frGLckxrCHrz15r7X
+imported private key for: EOS7s7tw3HuoMeqFzcC6VK99RnZJhf66rWfGa1F6EoBDkfWXUUso4
+imported private key for: EOS5iYbCAdhtdZRSvfD8w3ZhcCZf8GArpNvFyCwg8KjYvsostjtyw
+imported private key for: EOS7A8j8w7RwKQNoNPLnGnJmNX49vNkTkDkuNio3ndqB5GpqxBPLw
+imported private key for: EOS8imf2TDq6FKtLZ8mvXPWcd6EF2rQwo8zKdLNzsbU9EiMSt9Lwz
+imported private key for: EOS7Ef4kuyTbXbtSPP5Bgethvo6pbitpuEz2RMWhXb8LXxEgcR7MC
+imported private key for: EOS5n442Qz4yVc4LbdPCDnxNSseAiUCrNjRxAfPhUvM8tWS5svid6
+imported private key for: EOS5y3Tm1czTCia3o3JidVKmC78J9gRQU8qHjmRjFxTyhh2vxvF5d
+imported private key for: EOS5yR5GNn363W3cnet5PE6xWZxa2hDAhmJN5RrB1e3fmJmVNnDRJ
+imported private key for: EOS76wwc1zjzRMPQnEL6rTDWLfhN2ByZd6GhDJoWBKWM6M7cUmyfS
+imported private key for: EOS63piLomgbAGShNu7zv3whiR52Abz8gVVMRNAqw4apJ8EQKEnQ5
+imported private key for: EOS8ZjbDEi872aLpuuAjnd76NYW6KzPaf6RBSuwXcHmKm7A1sxayV
+imported private key for: EOS7oiy488wfzwbR6L9QwNDQb4CHGVR5ix9udJjVyykgbLaQLgBc5
+args.user_limit 3000
+args.producer_limit 0
+firstProducer 12
+bios-boot-tutorial.py: killall keosd nodeos || true
+sleep 1.5 ...
+resume
+bios-boot-tutorial.py: rm -rf /data4/bios-boot-tutorial/wallet
+bios-boot-tutorial.py: mkdir -p /data4/bios-boot-tutorial/wallet
+bios-boot-tutorial.py: /data4/eeos/build/programs/keosd/keosd --unlock-timeout 999999999 --http-server-address 120.197.130.116:6666 --wallet-dir /data4/bios-boot-tutorial/wallet
+sleep 0.4 ...
+resume
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet create --to-console
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p
+a: {'name': 'eoshuobipool', 'pvt': '5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr', 'pub': 'EOS69X3383RzBZj41k73CSjUNXM5MYGpnDxyPnWUKPEtYQmTBWz4D'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr
+a: {'name': 'starteosiobp', 'pvt': '5JUNYmkJ5wVmtVY8x9A1KKzYe9UWLZ4Fq1hzGZxfwfzJB8jkw6u', 'pub': 'EOS7yBtksm8Kkg85r4in4uCbfN77uRwe82apM8jjbhFVDgEgz3w8S'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5JUNYmkJ5wVmtVY8x9A1KKzYe9UWLZ4Fq1hzGZxfwfzJB8jkw6u
+a: {'name': 'eosiosg11111', 'pvt': '5K6LU8aVpBq9vJsnpCvaHCcyYwzPPKXfDdyefYyAMMs3Qy42fUr', 'pub': 'EOS7WnhaKwHpbSidYuh2DF1qAExTRUtPEdZCaZqt75cKcixuQUtdA'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5K6LU8aVpBq9vJsnpCvaHCcyYwzPPKXfDdyefYyAMMs3Qy42fUr
+a: {'name': 'eosbixinboot', 'pvt': '5KdRpt1juJfbPEryZsQYxyNxSTkXTdqEiL4Yx9cAjdgApt4ANce', 'pub': 'EOS7Bn1YDeZ18w2N9DU4KAJxZDt6hk3L7eUwFRAc1hb5bp6xJwxNV'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5KdRpt1juJfbPEryZsQYxyNxSTkXTdqEiL4Yx9cAjdgApt4ANce
+a: {'name': 'eosstorebest', 'pvt': '5HrEMEE5dbNL1VZPhpedt7MvKaoKP9iaMGwLw6uu3LS9CXnsyGx', 'pub': 'EOS5vs19cixeVh2LJ61moQwTSgeGBVj8rZqjE36tAXXF4tFcGdCJw'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5HrEMEE5dbNL1VZPhpedt7MvKaoKP9iaMGwLw6uu3LS9CXnsyGx
+a: {'name': 'eospaceioeos', 'pvt': '5JRMbcnc35NkvxKTZUnoe3W4ENQCjhMUFwjN5jQmAqN9D7N6y3N', 'pub': 'EOS6cNcTC6WTFkKV4C8DoxcTXdDTDKvj3vgZEVDGVFckK1eTNJQtf'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5JRMbcnc35NkvxKTZUnoe3W4ENQCjhMUFwjN5jQmAqN9D7N6y3N
+a: {'name': 'eoshenzhenio', 'pvt': '5HqyipkJSm5fwYhbhGC3vmmoBwabtgJSPecnvmN2mMrCTQfWBSS', 'pub': 'EOS8UkmsnCo4GxDihbKwgoZY6f2QLSMEqBZ2frGLckxrCHrz15r7X'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5HqyipkJSm5fwYhbhGC3vmmoBwabtgJSPecnvmN2mMrCTQfWBSS
+a: {'name': 'bosbosbosbos', 'pvt': '5KVXyyDUqponoRbG87zMevXhwMcCtjEoNSTqsVDWUfJDswQ6BGq', 'pub': 'EOS7s7tw3HuoMeqFzcC6VK99RnZJhf66rWfGa1F6EoBDkfWXUUso4'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5KVXyyDUqponoRbG87zMevXhwMcCtjEoNSTqsVDWUfJDswQ6BGq
+a: {'name': 'bosissuances', 'pvt': '5K7wm48NKHsLazUiPM8fRNGDQG2L25iUXNUcTzx2VtYcVSnF1rt', 'pub': 'EOS5iYbCAdhtdZRSvfD8w3ZhcCZf8GArpNvFyCwg8KjYvsostjtyw'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5K7wm48NKHsLazUiPM8fRNGDQG2L25iUXNUcTzx2VtYcVSnF1rt
+a: {'name': 'huobipeggeos', 'pvt': '5KYKVhGxW3oSVRNUmfCBLwjssZNf7jtWftho76SCvgEftdCuCKV', 'pub': 'EOS7A8j8w7RwKQNoNPLnGnJmNX49vNkTkDkuNio3ndqB5GpqxBPLw'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5KYKVhGxW3oSVRNUmfCBLwjssZNf7jtWftho76SCvgEftdCuCKV
+a: {'name': 'huobipeggeth', 'pvt': '5K6oTVBsCRHTwPtv7mHyw88HGG6HR5WdhRqr1JVsfzXkrxz9Prz', 'pub': 'EOS5vmTiyU2xhrbySpguSeVyHWc9spKRvYXqDkYnkkynK6A1UGKF3'}
+ap: {'name': 'producer111a', 'pvt': '5KLGj1HGRWbk5xNmoKfrcrQHXvcVJBPdAckoiJgFftXSJjLPp7b', 'pub': 'EOS8imf2TDq6FKtLZ8mvXPWcd6EF2rQwo8zKdLNzsbU9EiMSt9Lwz'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5KLGj1HGRWbk5xNmoKfrcrQHXvcVJBPdAckoiJgFftXSJjLPp7b
+ap: {'name': 'producer111b', 'pvt': '5K6qk1KaCYYWX86UhAfUsbMwhGPUqrqHrZEQDjs9ekP5j6LgHUu', 'pub': 'EOS7Ef4kuyTbXbtSPP5Bgethvo6pbitpuEz2RMWhXb8LXxEgcR7MC'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5K6qk1KaCYYWX86UhAfUsbMwhGPUqrqHrZEQDjs9ekP5j6LgHUu
+ap: {'name': 'producer111c', 'pvt': '5JCStvbRgUZ6hjyfUiUaxt5iU3HP6zC1kwx3W7SweaEGvs4EPfQ', 'pub': 'EOS5n442Qz4yVc4LbdPCDnxNSseAiUCrNjRxAfPhUvM8tWS5svid6'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5JCStvbRgUZ6hjyfUiUaxt5iU3HP6zC1kwx3W7SweaEGvs4EPfQ
+ap: {'name': 'producer111d', 'pvt': '5JJjaKnAb9KM2vkkJDgrYXoeUEdGgWtB5WK1a38wrmKnS3KtkS6', 'pub': 'EOS5y3Tm1czTCia3o3JidVKmC78J9gRQU8qHjmRjFxTyhh2vxvF5d'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5JJjaKnAb9KM2vkkJDgrYXoeUEdGgWtB5WK1a38wrmKnS3KtkS6
+ap: {'name': 'producer111e', 'pvt': '5K7hmHA2U3nNpwGx6AffWsHyvsSMJvVKVmSgxnSYAjAvjUfzd5j', 'pub': 'EOS5yR5GNn363W3cnet5PE6xWZxa2hDAhmJN5RrB1e3fmJmVNnDRJ'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5K7hmHA2U3nNpwGx6AffWsHyvsSMJvVKVmSgxnSYAjAvjUfzd5j
+ap: {'name': 'producer111f', 'pvt': '5K3TXkZAwyJkg7TjSfopd7sTr3RXFccghXHN1nJHTzap1ZKgLdK', 'pub': 'EOS76wwc1zjzRMPQnEL6rTDWLfhN2ByZd6GhDJoWBKWM6M7cUmyfS'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5K3TXkZAwyJkg7TjSfopd7sTr3RXFccghXHN1nJHTzap1ZKgLdK
+ap: {'name': 'producer111g', 'pvt': '5J498VQKaFVbh2ovPrMxa5DThE1fiWWfna6H2ZofmGMaVM7bs2M', 'pub': 'EOS63piLomgbAGShNu7zv3whiR52Abz8gVVMRNAqw4apJ8EQKEnQ5'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5J498VQKaFVbh2ovPrMxa5DThE1fiWWfna6H2ZofmGMaVM7bs2M
+ap: {'name': 'producer111h', 'pvt': '5JrC4vnVXroqvXtmSw3EiXcSv9agfDsKsUghzv2Rhiyrg9J36Z4', 'pub': 'EOS8ZjbDEi872aLpuuAjnd76NYW6KzPaf6RBSuwXcHmKm7A1sxayV'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5JrC4vnVXroqvXtmSw3EiXcSv9agfDsKsUghzv2Rhiyrg9J36Z4
+ap: {'name': 'producer111i', 'pvt': '5Jx1cCRPwHM7mr8brbeS6k5GYFEDKgmz34kmfmhywToF5wqddQE', 'pub': 'EOS7oiy488wfzwbR6L9QwNDQb4CHGVR5ix9udJjVyykgbLaQLgBc5'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5Jx1cCRPwHM7mr8brbeS6k5GYFEDKgmz34kmfmhywToF5wqddQE
+ap: {'name': 'producer111j', 'pvt': '5Hw5iBC7oGfR3FTwgDzHuzk4JAv24SiXq9iBbyPMb8JmKBHzjVX', 'pub': 'EOS6iBVEaRDS3mofUJpa8bjD94vohHrsSqqez1wcsWjhPpeNArfBF'}imported private key for: EOS6iBVEaRDS3mofUJpa8bjD94vohHrsSqqez1wcsWjhPpeNArfBF
+imported private key for: EOS8RpmTrNN7eEFno626tNutAKJbJ3TbMMyHi9sbmpU9t4vEYDAYM
+imported private key for: EOS8jxiWA9ZHN37csWnoShEbs8tvgtYxt2UN4ZtMBXhGJRk8tQJqR
+imported private key for: EOS6u4zPBn1EbhNtqmSFgUhoo1ZHb1je2qUskRgk4jUe2nUfpFXLP
+imported private key for: EOS4uUK6JSXyBHNCGYEzrZzepkMSHzJsaXBAHFsieGGQ1Syzpxy11
+imported private key for: EOS7iKtJ1qCgSaGfC8fquHquQYZmi43RQTkNWn68ggCTD5gUZjmYw
+imported private key for: EOS7KsEiRyppoaxv5yBW666b3MpDRq7FpQBttU2UUher5Ur2ke3pB
+imported private key for: EOS5kiGwBZQgvY8WibiAprDbXZF1KmgEgWzwfQbAP6LFDLm5PHkyH
+imported private key for: EOS66ncp9xAzdCaAggUDChFMq9YX9wfAJQmN5uMdxf8APV4ecqaZV
+imported private key for: EOS8VPgtZmjHmPXrSmY2Mita3zevnaKDHPiiyJHTQPbf4cMdA3EiK
+imported private key for: EOS6wLPhQzGE96dMNXZxSN9GFnNtHNXY5q6CZ1BY4CizWScLvHCH6
+imported private key for: EOS7M3GEpdYZhWhKaehthCfbyQBZfHwxDbZ9ewEGysscchkHv2WCq
+imported private key for: EOS83fUneyFirnM82JT6PxgbJp5ZMxj757YJDQLFPQHKvaezRNDoX
+imported private key for: EOS7rGbRupx3EkQo7dTcE9Ryx6XnEeNSEHwFABveDGtN7wUK4Xn9Q
+imported private key for: EOS7Xk7EhYdvWds1qkfdiTaaXYJyupJRm9Ufj5dba6QiYPqQT57hU
+imported private key for: EOS8erdpbAGK1Xbuz2zdxTY7Km2wHZfL6znXn1ijFJLPn1AR2ZzZx
+imported private key for: EOS64UfKJXespdvq4uYtN4rKEuSMuqRXq6rXaNkH8VCXP7iE1Bjdg
+imported private key for: EOS7DUtP3y2yqeabTYavbuFvA5yfSLM1fg7t3JVRr4dMuEJ4GZWZS
+imported private key for: EOS6K1vpE6XAX39kKAu2tBD6jJ8XpQzjWhC3X92duyQNBvdrk2zmr
+imported private key for: EOS7ogfqTFzUe97Rr6taa3SmqrqQJujMmjMHgZ72TfPZFXqVWPjSa
+imported private key for: EOS69tWc1VS6aP2P1D8ryzTiakPAYbV3whbHeWUzfD8QWYuHKqQxk
+
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5Hw5iBC7oGfR3FTwgDzHuzk4JAv24SiXq9iBbyPMb8JmKBHzjVX
+ap: {'name': 'producer111k', 'pvt': '5J3Zd6iSGcFFzRkUUqG7nKV8xifZb3sZvCnnst2WYgKqsRMvHTF', 'pub': 'EOS8RpmTrNN7eEFno626tNutAKJbJ3TbMMyHi9sbmpU9t4vEYDAYM'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5J3Zd6iSGcFFzRkUUqG7nKV8xifZb3sZvCnnst2WYgKqsRMvHTF
+ap: {'name': 'producer111l', 'pvt': '5JxWkyTDwktJVs9MNgNgmaLrRc26ESswR9gk926g47t6UCqvmop', 'pub': 'EOS8jxiWA9ZHN37csWnoShEbs8tvgtYxt2UN4ZtMBXhGJRk8tQJqR'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5JxWkyTDwktJVs9MNgNgmaLrRc26ESswR9gk926g47t6UCqvmop
+ap: {'name': 'producer111m', 'pvt': '5HwyQG6enrCrCZXYqrd2WsMmnreWAWUWGa9JjssodsYTSuaSA5F', 'pub': 'EOS6u4zPBn1EbhNtqmSFgUhoo1ZHb1je2qUskRgk4jUe2nUfpFXLP'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5HwyQG6enrCrCZXYqrd2WsMmnreWAWUWGa9JjssodsYTSuaSA5F
+ap: {'name': 'producer111n', 'pvt': '5JyvFNY4xMHX96UFjA1sNbLTRSom5zuLSn83KYXSVu1Ex4vuY9m', 'pub': 'EOS4uUK6JSXyBHNCGYEzrZzepkMSHzJsaXBAHFsieGGQ1Syzpxy11'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5JyvFNY4xMHX96UFjA1sNbLTRSom5zuLSn83KYXSVu1Ex4vuY9m
+ap: {'name': 'producer111o', 'pvt': '5KNe71b8F6zUszs2Mg2GPZa5cUse5i9Uy9EeH1g692aCq7KnGk9', 'pub': 'EOS7iKtJ1qCgSaGfC8fquHquQYZmi43RQTkNWn68ggCTD5gUZjmYw'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5KNe71b8F6zUszs2Mg2GPZa5cUse5i9Uy9EeH1g692aCq7KnGk9
+ap: {'name': 'producer111p', 'pvt': '5K61WJJWJ2ua4nz6EmgUMyAgEnRVc1MdvrHzi4PdVaPHV7R3r4M', 'pub': 'EOS7KsEiRyppoaxv5yBW666b3MpDRq7FpQBttU2UUher5Ur2ke3pB'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5K61WJJWJ2ua4nz6EmgUMyAgEnRVc1MdvrHzi4PdVaPHV7R3r4M
+ap: {'name': 'producer111q', 'pvt': '5KAiF4UX7kLHeScvA7fqrSdfxKycEZ2y76uRCRD78kFpdUeq2xm', 'pub': 'EOS5kiGwBZQgvY8WibiAprDbXZF1KmgEgWzwfQbAP6LFDLm5PHkyH'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5KAiF4UX7kLHeScvA7fqrSdfxKycEZ2y76uRCRD78kFpdUeq2xm
+ap: {'name': 'producer111r', 'pvt': '5JwfitftPcR1eMfNuo4ZqeKYECkFCZBbPYC9zH51MK7i87packn', 'pub': 'EOS66ncp9xAzdCaAggUDChFMq9YX9wfAJQmN5uMdxf8APV4ecqaZV'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5JwfitftPcR1eMfNuo4ZqeKYECkFCZBbPYC9zH51MK7i87packn
+ap: {'name': 'producer111s', 'pvt': '5JyVEkLeSgioeMcw7sBLDHam4xxxDWMgaVnaBEmdWbHr9Xuo3oT', 'pub': 'EOS8VPgtZmjHmPXrSmY2Mita3zevnaKDHPiiyJHTQPbf4cMdA3EiK'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5JyVEkLeSgioeMcw7sBLDHam4xxxDWMgaVnaBEmdWbHr9Xuo3oT
+ap: {'name': 'producer111t', 'pvt': '5Jj5MMoPGp4H5bC5L6XAvDFhGGok2ghTd4mJxs9toihBYJf3oKX', 'pub': 'EOS6wLPhQzGE96dMNXZxSN9GFnNtHNXY5q6CZ1BY4CizWScLvHCH6'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5Jj5MMoPGp4H5bC5L6XAvDFhGGok2ghTd4mJxs9toihBYJf3oKX
+ap: {'name': 'producer111u', 'pvt': '5KGWWthBagnELkrn71W4q1CtaExxasmM9X2eV8AUvjMCb1kgLHG', 'pub': 'EOS7M3GEpdYZhWhKaehthCfbyQBZfHwxDbZ9ewEGysscchkHv2WCq'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5KGWWthBagnELkrn71W4q1CtaExxasmM9X2eV8AUvjMCb1kgLHG
+ap: {'name': 'producer111v', 'pvt': '5JEEVueiBZDXVQCTRduZnTs6hLUA29dG76p8NEQqWSZ2Fg4TkbD', 'pub': 'EOS83fUneyFirnM82JT6PxgbJp5ZMxj757YJDQLFPQHKvaezRNDoX'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5JEEVueiBZDXVQCTRduZnTs6hLUA29dG76p8NEQqWSZ2Fg4TkbD
+ap: {'name': 'producer111w', 'pvt': '5KNMTQ3qZMH9LBjBqRMmDTi8DTGbQYYbJv1p5a58nGcYqDzaRJ5', 'pub': 'EOS7rGbRupx3EkQo7dTcE9Ryx6XnEeNSEHwFABveDGtN7wUK4Xn9Q'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5KNMTQ3qZMH9LBjBqRMmDTi8DTGbQYYbJv1p5a58nGcYqDzaRJ5
+ap: {'name': 'producer111x', 'pvt': '5K5KAPehBnqQD3sRryjXWfTYaPDfmMfAAYauNk49tSf2gXfCEQo', 'pub': 'EOS7Xk7EhYdvWds1qkfdiTaaXYJyupJRm9Ufj5dba6QiYPqQT57hU'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5K5KAPehBnqQD3sRryjXWfTYaPDfmMfAAYauNk49tSf2gXfCEQo
+ap: {'name': 'producer111y', 'pvt': '5Jo3yZyJJwaoGzSRVi6PimiuxA3HE48Tyti7X1BmQrtt3dx2szH', 'pub': 'EOS8erdpbAGK1Xbuz2zdxTY7Km2wHZfL6znXn1ijFJLPn1AR2ZzZx'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5Jo3yZyJJwaoGzSRVi6PimiuxA3HE48Tyti7X1BmQrtt3dx2szH
+ap: {'name': 'producer111z', 'pvt': '5JsP33C6e9edyFC6QWp361Q9ZVNKWKSznQ6198PkP1c8FpjQcdx', 'pub': 'EOS64UfKJXespdvq4uYtN4rKEuSMuqRXq6rXaNkH8VCXP7iE1Bjdg'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5JsP33C6e9edyFC6QWp361Q9ZVNKWKSznQ6198PkP1c8FpjQcdx
+ap: {'name': 'producer1111', 'pvt': '5JDuKWcJFiwtogspSusdqcHWsHKEn5HydApKL58GaVNdnvQh1m1', 'pub': 'EOS7DUtP3y2yqeabTYavbuFvA5yfSLM1fg7t3JVRr4dMuEJ4GZWZS'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5JDuKWcJFiwtogspSusdqcHWsHKEn5HydApKL58GaVNdnvQh1m1
+ap: {'name': 'producer1112', 'pvt': '5KD3hRFXkMYYUurVC3myJo9FRmT9d9XidyNXYSVTKtQ4wegh4Uw', 'pub': 'EOS6K1vpE6XAX39kKAu2tBD6jJ8XpQzjWhC3X92duyQNBvdrk2zmr'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5KD3hRFXkMYYUurVC3myJo9FRmT9d9XidyNXYSVTKtQ4wegh4Uw
+ap: {'name': 'producer1113', 'pvt': '5JYamJxxJiB8aJhn4W5G5XUxzBd8HRNWoQop7SLNhgnf6LAiquF', 'pub': 'EOS7ogfqTFzUe97Rr6taa3SmqrqQJujMmjMHgZ72TfPZFXqVWPjSa'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5JYamJxxJiB8aJhn4W5G5XUxzBd8HRNWoQop7SLNhgnf6LAiquF
+ap: {'name': 'producer1114', 'pvt': '5KZFvhuNuU3es7hEoAorppkhfCuAfqBGGtzqvesArmzwVwJf64B', 'pub': 'EOS69tWc1VS6aP2P1D8ryzTiakPAYbV3whbHeWUzfD8QWYuHKqQxk'}
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 wallet import --private-key 5KZFvhuNuU3es7hEoAorppkhfCuAfqBGGtzqvesArmzwVwJf64B
+bios-boot-tutorial.py: rm -rf ./nodes/00-eosio/
+bios-boot-tutorial.py: mkdir -p ./nodes/00-eosio/
+bios-boot-tutorial.py: /data4/eeos/build/programs/nodeos/nodeos    --max-irreversible-block-age -1    --contracts-console    --verbose-http-errors    --genesis-json /data4/bios-boot-tutorial/genesis.json    --blocks-dir /data4/bios-boot-tutorial/nodes/00-eosio/blocks    --config-dir /data4/bios-boot-tutorial/nodes/00-eosio    --data-dir /data4/bios-boot-tutorial/nodes/00-eosio    --chain-state-db-size-mb 1024    --http-server-address 120.197.130.116:8000    --p2p-listen-endpoint 120.197.130.116:9000    --max-clients 40    --p2p-max-nodes-per-host 40    --enable-stale-production    --producer-name eosio    --private-key '["EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr","5K463ynhZoCDDa4RDcr63cUwWLTnKqmdcoTKTHBjqoKfv4u5V7p"]'    --plugin eosio::http_plugin    --plugin eosio::chain_api_plugin    --plugin eosio::producer_plugin    --plugin eosio::history_plugin    --plugin eosio::history_api_plugin    2>>./nodes/00-eosio/stderr#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosio.bpay","owner":{"threshold":1,"keys":[{"key":"EOS8Znrtgwt8TfpmbVpTKv...
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosio.msig","owner":{"threshold":1,"keys":[{"key":"EOS8Znrtgwt8TfpmbVpTKv...
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosio.names","owner":{"threshold":1,"keys":[{"key":"EOS8Znrtgwt8TfpmbVpTK...
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosio.ram","owner":{"threshold":1,"keys":[{"key":"EOS8Znrtgwt8TfpmbVpTKvA...
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosio.ramfee","owner":{"threshold":1,"keys":[{"key":"EOS8Znrtgwt8TfpmbVpT...
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosio.saving","owner":{"threshold":1,"keys":[{"key":"EOS8Znrtgwt8TfpmbVpT...
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosio.stake","owner":{"threshold":1,"keys":[{"key":"EOS8Znrtgwt8TfpmbVpTK...
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosio.token","owner":{"threshold":1,"keys":[{"key":"EOS8Znrtgwt8TfpmbVpTK...
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosio.vpay","owner":{"threshold":1,"keys":[{"key":"EOS8Znrtgwt8TfpmbVpTKv...
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosio.btc","owner":{"threshold":1,"keys":[{"key":"EOS8Znrtgwt8TfpmbVpTKvA...
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosio.eth","owner":{"threshold":1,"keys":[{"key":"EOS8Znrtgwt8TfpmbVpTKvA...
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosio.eos","owner":{"threshold":1,"keys":[{"key":"EOS8Znrtgwt8TfpmbVpTKvA...
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"bos.pegtoken","owner":{"threshold":1,"keys":[{"key":"EOS8Znrtgwt8TfpmbVpT...
+#         eosio <= eosio::setcode               {"account":"eosio.token","vmtype":0,"vmversion":0,"code":"0061736d01000000017e1560037f7e7f0060057f7e...
+#         eosio <= eosio::setabi                {"account":"eosio.token","abi":"0e656f73696f3a3a6162692f312e30010c6163636f756e745f6e616d65046e616d65...
+#         eosio <= eosio::setcode               {"account":"eosio.msig","vmtype":0,"vmversion":0,"code":"0061736d010000000198011760017f0060047f7e7e7...
+#         eosio <= eosio::setabi                {"account":"eosio.msig","abi":"0e656f73696f3a3a6162692f312e30030c6163636f756e745f6e616d65046e616d650...
+#         eosio <= eosio::setcode               {"account":"eosio.eos","vmtype":0,"vmversion":0,"code":"0061736d0100000001a9022a60037f7e7f0060047f7e...
+#         eosio <= eosio::setabi                {"account":"eosio.eos","abi":"0e656f73696f3a3a6162692f312e310013076163636f756e7400010762616c616e6365...
+#         eosio <= eosio::setcode               {"account":"eosio.btc","vmtype":0,"vmversion":0,"code":"0061736d0100000001a9022a60037f7e7f0060047f7e...
+#         eosio <= eosio::setabi                {"account":"eosio.btc","abi":"0e656f73696f3a3a6162692f312e310013076163636f756e7400010762616c616e6365...
+#         eosio <= eosio::setcode               {"account":"eosio.eth","vmtype":0,"vmversion":0,"code":"0061736d0100000001a9022a60037f7e7f0060047f7e...
+#         eosio <= eosio::setabi                {"account":"eosio.eth","abi":"0e656f73696f3a3a6162692f312e310013076163636f756e7400010762616c616e6365...
+#     eosio.eos <= eosio.eos::init              {"sym_base":"4,EOS","repeatable":"repeatable"}
+#     eosio.eth <= eosio.eth::init              {"sym_base":"8,ETH","repeatable":"non-repeatable"}
+#     eosio.btc <= eosio.btc::init              {"sym_base":"8,BTC","repeatable":"non-repeatable"}
+#     eosio.eos <= eosio.eos::create            {"issuer":"eosio","maximum_supply":"10000000000.0000 EOSHB","organization":"Huobi","website":"https:...
+#     eosio.eth <= eosio.eth::create            {"issuer":"eosio","maximum_supply":"120000000.00000000 ETHHB","organization":"Huobi","website":"http...
+#     eosio.btc <= eosio.btc::create            {"issuer":"eosio","maximum_supply":"21000000.00000000 BTCHB","organization":"Huobi","website":"https...
+#   eosio.token <= eosio.token::create          {"issuer":"eosio","maximum_supply":"10000000000.0000 BOS"}
+#   eosio.token <= eosio.token::create          {"issuer":"eosio","maximum_supply":"10000000000.0000 EOS"}
+#   eosio.token <= eosio.token::issue           {"to":"eosio","quantity":"999999999.9999 EOS","memo":"memo"}
+#         eosio <= eosio::setcode               {"account":"eosio","vmtype":0,"vmversion":0,"code":"0061736d0100000001b0022e60037f7e7e0060017f006002...
+#         eosio <= eosio::setabi                {"account":"eosio","abi":"0e656f73696f3a3a6162692f312e30050c6163636f756e745f6e616d65046e616d650f7065...
+#         eosio <= eosio::setpriv               {"account":"eosio.msig","is_priv":1}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eoshuobipool","owner":{"threshold":1,"keys":[{"key":"EOS69X3383RzBZj41k73...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"eoshuobipool","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"eoshuobipool","stake_net_quantity":"179054516.1428 EOS","stake_cpu_quant...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"358109032.2855 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"358109032.2855 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"358109032.2855 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eoshuobipool","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eoshuobipool","quantity":"10.0000 EOS","memo":""}
+#  eoshuobipool <= eosio.token::transfer        {"from":"eosio","to":"eoshuobipool","quantity":"10.0000 EOS","memo":""}
+
+sleep 1.5 ...
+resume
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 create account eosio eosio.bpay EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 create account eosio eosio.msig EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 create account eosio eosio.names EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 create account eosio eosio.ram EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 create account eosio eosio.ramfee EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 create account eosio eosio.saving EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 create account eosio eosio.stake EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 create account eosio eosio.token EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 create account eosio eosio.vpay EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 create account eosio eosio.btc EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 create account eosio eosio.eth EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 create account eosio eosio.eos EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 create account eosio bos.pegtoken EOS8Znrtgwt8TfpmbVpTKvA2oB8Nqey625CLN8bCN3TEbgx86Dsvr
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 set contract eosio.token /data4/eeos/build/contracts/eosio.token/
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 set contract eosio.msig /data4/eeos/build/contracts/eosio.msig/
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 set contract eosio.eos /data4/eeos/build/contracts/bos.pegtoken/
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 set contract eosio.btc /data4/eeos/build/contracts/bos.pegtoken/
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 set contract eosio.eth /data4/eeos/build/contracts/bos.pegtoken/
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio.eos init '["4,EOS", "repeatable"] '  -p eosio.eos
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio.eth init '["8,ETH", "non-repeatable"] '  -p eosio.eth
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio.btc init '["8,BTC", "non-repeatable"] '  -p eosio.btc
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio.eos create '["eosio", "10000000000.0000 EOSHB", "Huobi", "https://www.huobi.com", "", "", "", ""] ' -p eosio.eos
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio.eth create '["eosio", "120000000.00000000 ETHHB", "Huobi", "https://www.huobi.com", "", "", "", ""] ' -p eosio.eth
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio.btc create '["eosio", "21000000.00000000 BTCHB", "Huobi", "https://www.huobi.com", "", "", "", ""] ' -p eosio.btc
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio.token create '["eosio", "10000000000.0000 BOS"]' -p eosio.token
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio.token create '["eosio", "10000000000.0000 EOS"]' -p eosio.token
+args.min_producer_funds:  1000.0
+totalAllocation:  9999999999999
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio.token issue '["eosio", "999999999.9999 EOS", "memo"]' -p eosio
+sleep 1 ...
+resume
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 set contract eosio /data4/eeos/build/contracts/eosio.system/
+*** Retry
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 set contract eosio /data4/eeos/build/contracts/eosio.system/
+sleep 1 ...
+resume
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio setpriv '["eosio.msig", 1]' -p eosio@active
+################################################################################
+# 0/42 eoshuobipool 358109042.3855 EOS
+################################################################################
+eoshuobipool: total funds=358109042.3855 EOS, ram=0.1000 EOS, net=179054516.1428 EOS, cpu=179054516.1427 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio eoshuobipool EOS69X3383RzBZj41k73CSjUNXM5MYGpnDxyPnWUKPEtYQmTBWz4D --stake-net "179054516.1428 EOS" --stake-cpu "179054516.1427 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio eoshuobipool "10.0000 EOS"
+################################################################################
+# 1/42 starteosiobp 111872405.3311 EOS
+################################################################################
+starteosiobp: total funds=111872405.3311 EOS, ram=0.1000 EOS, net=55936197.6156 EOS, cpu=55936197.6155 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio starteosiobp EOS7yBtksm8Kkg85r4in4uCbfN77uRwe82apM8jjbhFVDgEgz3w8S --stake-net "55936197.6156 EOS" --stake-cpu "55936197.6155 EOS" --buy-ram "0.1000 EOS"   #         eosio <= eosio::newaccount            {"creator":"eosio","name":"starteosiobp","owner":{"threshold":1,"keys":[{"key":"EOS7yBtksm8Kkg85r4in...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"starteosiobp","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"starteosiobp","stake_net_quantity":"55936197.6156 EOS","stake_cpu_quanti...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"111872395.2311 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"111872395.2311 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"111872395.2311 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"starteosiobp","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"starteosiobp","quantity":"10.0000 EOS","memo":""}
+#  starteosiobp <= eosio.token::transfer        {"from":"eosio","to":"starteosiobp","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosiosg11111","owner":{"threshold":1,"keys":[{"key":"EOS7WnhaKwHpbSidYuh2...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"eosiosg11111","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"eosiosg11111","stake_net_quantity":"35761410.9808 EOS","stake_cpu_quanti...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"71522821.9616 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"71522821.9616 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"71522821.9616 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosiosg11111","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosiosg11111","quantity":"10.0000 EOS","memo":""}
+#  eosiosg11111 <= eosio.token::transfer        {"from":"eosio","to":"eosiosg11111","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosbixinboot","owner":{"threshold":1,"keys":[{"key":"EOS7Bn1YDeZ18w2N9DU4...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"eosbixinboot","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"eosbixinboot","stake_net_quantity":"26732417.8906 EOS","stake_cpu_quanti...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"53464835.7811 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"53464835.7811 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"53464835.7811 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosbixinboot","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosbixinboot","quantity":"10.0000 EOS","memo":""}
+#  eosbixinboot <= eosio.token::transfer        {"from":"eosio","to":"eosbixinboot","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eosstorebest","owner":{"threshold":1,"keys":[{"key":"EOS5vs19cixeVh2LJ61m...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"eosstorebest","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"eosstorebest","stake_net_quantity":"21575244.5154 EOS","stake_cpu_quanti...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"43150489.0307 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"43150489.0307 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"43150489.0307 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosstorebest","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosstorebest","quantity":"10.0000 EOS","memo":""}
+#  eosstorebest <= eosio.token::transfer        {"from":"eosio","to":"eosstorebest","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eospaceioeos","owner":{"threshold":1,"keys":[{"key":"EOS6cNcTC6WTFkKV4C8D...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"eospaceioeos","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"eospaceioeos","stake_net_quantity":"16781487.9162 EOS","stake_cpu_quanti...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"33562975.8324 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"33562975.8324 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"33562975.8324 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eospaceioeos","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eospaceioeos","quantity":"10.0000 EOS","memo":""}
+#  eospaceioeos <= eosio.token::transfer        {"from":"eosio","to":"eospaceioeos","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"eoshenzhenio","owner":{"threshold":1,"keys":[{"key":"EOS8UkmsnCo4GxDihbKw...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"eoshenzhenio","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"eoshenzhenio","stake_net_quantity":"15977146.7510 EOS","stake_cpu_quanti...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"31954293.5020 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"31954293.5020 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"31954293.5020 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eoshenzhenio","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eoshenzhenio","quantity":"10.0000 EOS","memo":""}
+#  eoshenzhenio <= eosio.token::transfer        {"from":"eosio","to":"eoshenzhenio","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"bosbosbosbos","owner":{"threshold":1,"keys":[{"key":"EOS7s7tw3HuoMeqFzcC6...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"bosbosbosbos","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"bosbosbosbos","stake_net_quantity":"15159659.7371 EOS","stake_cpu_quanti...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"30319319.4742 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"30319319.4742 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"30319319.4742 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"bosbosbosbos","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"bosbosbosbos","quantity":"10.0000 EOS","memo":""}
+#  bosbosbosbos <= eosio.token::transfer        {"from":"eosio","to":"bosbosbosbos","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"bosissuances","owner":{"threshold":1,"keys":[{"key":"EOS5iYbCAdhtdZRSvfD8...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"bosissuances","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"bosissuances","stake_net_quantity":"14577078.9008 EOS","stake_cpu_quanti...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"29154157.8015 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"29154157.8015 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"29154157.8015 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"bosissuances","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"bosissuances","quantity":"10.0000 EOS","memo":""}
+#  bosissuances <= eosio.token::transfer        {"from":"eosio","to":"bosissuances","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"huobipeggeos","owner":{"threshold":1,"keys":[{"key":"EOS7A8j8w7RwKQNoNPLn...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"huobipeggeos","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"huobipeggeos","stake_net_quantity":"12504222.6786 EOS","stake_cpu_quanti...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"25008445.3573 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"25008445.3573 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"25008445.3573 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"huobipeggeos","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"huobipeggeos","quantity":"10.0000 EOS","memo":""}
+#  huobipeggeos <= eosio.token::transfer        {"from":"eosio","to":"huobipeggeos","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"huobipeggeth","owner":{"threshold":1,"keys":[{"key":"EOS5vmTiyU2xhrbySpgu...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"huobipeggeth","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"huobipeggeth","stake_net_quantity":"7986367.0612 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"15972734.1224 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"15972734.1224 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"15972734.1224 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"huobipeggeth","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"huobipeggeth","quantity":"10.0000 EOS","memo":""}
+#  huobipeggeth <= eosio.token::transfer        {"from":"eosio","to":"huobipeggeth","quantity":"10.0000 EOS","memo":""}
+
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio starteosiobp "10.0000 EOS"
+################################################################################
+# 2/42 eosiosg11111 71522832.0616 EOS
+################################################################################
+eosiosg11111: total funds=71522832.0616 EOS, ram=0.1000 EOS, net=35761410.9808 EOS, cpu=35761410.9808 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio eosiosg11111 EOS7WnhaKwHpbSidYuh2DF1qAExTRUtPEdZCaZqt75cKcixuQUtdA --stake-net "35761410.9808 EOS" --stake-cpu "35761410.9808 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio eosiosg11111 "10.0000 EOS"
+################################################################################
+# 3/42 eosbixinboot 53464845.8811 EOS
+################################################################################
+eosbixinboot: total funds=53464845.8811 EOS, ram=0.1000 EOS, net=26732417.8906 EOS, cpu=26732417.8905 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio eosbixinboot EOS7Bn1YDeZ18w2N9DU4KAJxZDt6hk3L7eUwFRAc1hb5bp6xJwxNV --stake-net "26732417.8906 EOS" --stake-cpu "26732417.8905 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio eosbixinboot "10.0000 EOS"
+################################################################################
+# 4/42 eosstorebest 43150499.1307 EOS
+################################################################################
+eosstorebest: total funds=43150499.1307 EOS, ram=0.1000 EOS, net=21575244.5154 EOS, cpu=21575244.5153 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio eosstorebest EOS5vs19cixeVh2LJ61moQwTSgeGBVj8rZqjE36tAXXF4tFcGdCJw --stake-net "21575244.5154 EOS" --stake-cpu "21575244.5153 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio eosstorebest "10.0000 EOS"
+################################################################################
+# 5/42 eospaceioeos 33562985.9324 EOS
+################################################################################
+eospaceioeos: total funds=33562985.9324 EOS, ram=0.1000 EOS, net=16781487.9162 EOS, cpu=16781487.9162 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio eospaceioeos EOS6cNcTC6WTFkKV4C8DoxcTXdDTDKvj3vgZEVDGVFckK1eTNJQtf --stake-net "16781487.9162 EOS" --stake-cpu "16781487.9162 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio eospaceioeos "10.0000 EOS"
+################################################################################
+# 6/42 eoshenzhenio 31954303.6020 EOS
+################################################################################
+eoshenzhenio: total funds=31954303.6020 EOS, ram=0.1000 EOS, net=15977146.7510 EOS, cpu=15977146.7510 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio eoshenzhenio EOS8UkmsnCo4GxDihbKwgoZY6f2QLSMEqBZ2frGLckxrCHrz15r7X --stake-net "15977146.7510 EOS" --stake-cpu "15977146.7510 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio eoshenzhenio "10.0000 EOS"
+################################################################################
+# 7/42 bosbosbosbos 30319329.5742 EOS
+################################################################################
+bosbosbosbos: total funds=30319329.5742 EOS, ram=0.1000 EOS, net=15159659.7371 EOS, cpu=15159659.7371 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio bosbosbosbos EOS7s7tw3HuoMeqFzcC6VK99RnZJhf66rWfGa1F6EoBDkfWXUUso4 --stake-net "15159659.7371 EOS" --stake-cpu "15159659.7371 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio bosbosbosbos "10.0000 EOS"
+################################################################################
+# 8/42 bosissuances 29154167.9015 EOS
+################################################################################
+bosissuances: total funds=29154167.9015 EOS, ram=0.1000 EOS, net=14577078.9008 EOS, cpu=14577078.9007 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio bosissuances EOS5iYbCAdhtdZRSvfD8w3ZhcCZf8GArpNvFyCwg8KjYvsostjtyw --stake-net "14577078.9008 EOS" --stake-cpu "14577078.9007 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio bosissuances "10.0000 EOS"
+################################################################################
+# 9/42 huobipeggeos 25008455.4573 EOS
+################################################################################
+huobipeggeos: total funds=25008455.4573 EOS, ram=0.1000 EOS, net=12504222.6786 EOS, cpu=12504222.6787 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio huobipeggeos EOS7A8j8w7RwKQNoNPLnGnJmNX49vNkTkDkuNio3ndqB5GpqxBPLw --stake-net "12504222.6786 EOS" --stake-cpu "12504222.6787 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio huobipeggeos "10.0000 EOS"
+################################################################################
+# 10/42 huobipeggeth 15972744.2224 EOS
+################################################################################
+huobipeggeth: total funds=15972744.2224 EOS, ram=0.1000 EOS, net=7986367.0612 EOS, cpu=7986367.0612 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio huobipeggeth EOS5vmTiyU2xhrbySpguSeVyHWc9spKRvYXqDkYnkkynK6A1UGKF3 --stake-net "7986367.0612 EOS" --stake-cpu "7986367.0612 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio huobipeggeth "10.0000 EOS"
+################################################################################
+# 11/42 huobipeggbtc 14548938.7722 EOS
+################################################################################
+huobipeggbtc: total funds=14548938.7722 EOS, ram=0.1000 EOS, net=7274464.3361 EOS, cpu=7274464.3361 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio huobipeggbtc EOS5PqJUhhSd5jyMhww1jYAcTz6E3gs8HcbgiKTHHGwRsDRR5Ycjf --stake-net "7274464.3361 EOS" --stake-cpu "7274464.3361 EOS" --buy-ram "0.1000 EOS"   #         eosio <= eosio::newaccount            {"creator":"eosio","name":"huobipeggbtc","owner":{"threshold":1,"keys":[{"key":"EOS5PqJUhhSd5jyMhww1...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"huobipeggbtc","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"huobipeggbtc","stake_net_quantity":"7274464.3361 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"14548928.6722 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"14548928.6722 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"14548928.6722 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"huobipeggbtc","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"huobipeggbtc","quantity":"10.0000 EOS","memo":""}
+#  huobipeggbtc <= eosio.token::transfer        {"from":"eosio","to":"huobipeggbtc","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111a","owner":{"threshold":1,"keys":[{"key":"EOS8imf2TDq6FKtLZ8mv...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111a","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111a","stake_net_quantity":"6959796.1528 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"13919592.3057 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"13919592.3057 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"13919592.3057 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111a","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111a","quantity":"10.0000 EOS","memo":""}
+#  producer111a <= eosio.token::transfer        {"from":"eosio","to":"producer111a","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111b","owner":{"threshold":1,"keys":[{"key":"EOS7Ef4kuyTbXbtSPP5B...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111b","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111b","stake_net_quantity":"6766444.2507 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"13532888.5014 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"13532888.5014 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"13532888.5014 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111b","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111b","quantity":"10.0000 EOS","memo":""}
+#  producer111b <= eosio.token::transfer        {"from":"eosio","to":"producer111b","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111c","owner":{"threshold":1,"keys":[{"key":"EOS5n442Qz4yVc4LbdPC...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111c","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111c","stake_net_quantity":"6538462.1946 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"13076924.3892 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"13076924.3892 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"13076924.3892 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111c","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111c","quantity":"10.0000 EOS","memo":""}
+#  producer111c <= eosio.token::transfer        {"from":"eosio","to":"producer111c","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111d","owner":{"threshold":1,"keys":[{"key":"EOS5y3Tm1czTCia3o3Ji...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111d","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111d","stake_net_quantity":"5803660.9790 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"11607321.9580 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"11607321.9580 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"11607321.9580 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111d","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111d","quantity":"10.0000 EOS","memo":""}
+#  producer111d <= eosio.token::transfer        {"from":"eosio","to":"producer111d","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111e","owner":{"threshold":1,"keys":[{"key":"EOS5yR5GNn363W3cnet5...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111e","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111e","stake_net_quantity":"5388085.1236 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"10776170.2473 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"10776170.2473 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"10776170.2473 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111e","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111e","quantity":"10.0000 EOS","memo":""}
+#  producer111e <= eosio.token::transfer        {"from":"eosio","to":"producer111e","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111f","owner":{"threshold":1,"keys":[{"key":"EOS76wwc1zjzRMPQnEL6...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111f","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111f","stake_net_quantity":"5298821.1912 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"10597642.3825 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"10597642.3825 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"10597642.3825 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111f","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111f","quantity":"10.0000 EOS","memo":""}
+#  producer111f <= eosio.token::transfer        {"from":"eosio","to":"producer111f","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111g","owner":{"threshold":1,"keys":[{"key":"EOS63piLomgbAGShNu7z...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111g","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111g","stake_net_quantity":"4999984.6143 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"9999969.2286 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"9999969.2286 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"9999969.2286 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111g","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111g","quantity":"10.0000 EOS","memo":""}
+#  producer111g <= eosio.token::transfer        {"from":"eosio","to":"producer111g","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111h","owner":{"threshold":1,"keys":[{"key":"EOS8ZjbDEi872aLpuuAj...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111h","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111h","stake_net_quantity":"4924566.1730 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"9849132.3461 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"9849132.3461 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"9849132.3461 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111h","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111h","quantity":"10.0000 EOS","memo":""}
+#  producer111h <= eosio.token::transfer        {"from":"eosio","to":"producer111h","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111i","owner":{"threshold":1,"keys":[{"key":"EOS7oiy488wfzwbR6L9Q...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111i","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111i","stake_net_quantity":"4918993.9048 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"9837987.8095 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"9837987.8095 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"9837987.8095 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111i","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111i","quantity":"10.0000 EOS","memo":""}
+#  producer111i <= eosio.token::transfer        {"from":"eosio","to":"producer111i","quantity":"10.0000 EOS","memo":""}
+
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio huobipeggbtc "10.0000 EOS"
+################################################################################
+# 12/42 producer111a 13919602.4057 EOS
+################################################################################
+producer111a: total funds=13919602.4057 EOS, ram=0.1000 EOS, net=6959796.1528 EOS, cpu=6959796.1529 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111a EOS8imf2TDq6FKtLZ8mvXPWcd6EF2rQwo8zKdLNzsbU9EiMSt9Lwz --stake-net "6959796.1528 EOS" --stake-cpu "6959796.1529 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111a "10.0000 EOS"
+################################################################################
+# 13/42 producer111b 13532898.6014 EOS
+################################################################################
+producer111b: total funds=13532898.6014 EOS, ram=0.1000 EOS, net=6766444.2507 EOS, cpu=6766444.2507 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111b EOS7Ef4kuyTbXbtSPP5Bgethvo6pbitpuEz2RMWhXb8LXxEgcR7MC --stake-net "6766444.2507 EOS" --stake-cpu "6766444.2507 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111b "10.0000 EOS"
+################################################################################
+# 14/42 producer111c 13076934.4892 EOS
+################################################################################
+producer111c: total funds=13076934.4892 EOS, ram=0.1000 EOS, net=6538462.1946 EOS, cpu=6538462.1946 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111c EOS5n442Qz4yVc4LbdPCDnxNSseAiUCrNjRxAfPhUvM8tWS5svid6 --stake-net "6538462.1946 EOS" --stake-cpu "6538462.1946 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111c "10.0000 EOS"
+################################################################################
+# 15/42 producer111d 11607332.0580 EOS
+################################################################################
+producer111d: total funds=11607332.0580 EOS, ram=0.1000 EOS, net=5803660.9790 EOS, cpu=5803660.9790 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111d EOS5y3Tm1czTCia3o3JidVKmC78J9gRQU8qHjmRjFxTyhh2vxvF5d --stake-net "5803660.9790 EOS" --stake-cpu "5803660.9790 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111d "10.0000 EOS"
+################################################################################
+# 16/42 producer111e 10776180.3473 EOS
+################################################################################
+producer111e: total funds=10776180.3473 EOS, ram=0.1000 EOS, net=5388085.1236 EOS, cpu=5388085.1237 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111e EOS5yR5GNn363W3cnet5PE6xWZxa2hDAhmJN5RrB1e3fmJmVNnDRJ --stake-net "5388085.1236 EOS" --stake-cpu "5388085.1237 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111e "10.0000 EOS"
+################################################################################
+# 17/42 producer111f 10597652.4825 EOS
+################################################################################
+producer111f: total funds=10597652.4825 EOS, ram=0.1000 EOS, net=5298821.1912 EOS, cpu=5298821.1913 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111f EOS76wwc1zjzRMPQnEL6rTDWLfhN2ByZd6GhDJoWBKWM6M7cUmyfS --stake-net "5298821.1912 EOS" --stake-cpu "5298821.1913 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111f "10.0000 EOS"
+################################################################################
+# 18/42 producer111g 9999979.3286 EOS
+################################################################################
+producer111g: total funds=9999979.3286 EOS, ram=0.1000 EOS, net=4999984.6143 EOS, cpu=4999984.6143 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111g EOS63piLomgbAGShNu7zv3whiR52Abz8gVVMRNAqw4apJ8EQKEnQ5 --stake-net "4999984.6143 EOS" --stake-cpu "4999984.6143 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111g "10.0000 EOS"
+################################################################################
+# 19/42 producer111h 9849142.4461 EOS
+################################################################################
+producer111h: total funds=9849142.4461 EOS, ram=0.1000 EOS, net=4924566.1730 EOS, cpu=4924566.1731 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111h EOS8ZjbDEi872aLpuuAjnd76NYW6KzPaf6RBSuwXcHmKm7A1sxayV --stake-net "4924566.1730 EOS" --stake-cpu "4924566.1731 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111h "10.0000 EOS"
+################################################################################
+# 20/42 producer111i 9837997.9095 EOS
+################################################################################
+producer111i: total funds=9837997.9095 EOS, ram=0.1000 EOS, net=4918993.9048 EOS, cpu=4918993.9047 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111i EOS7oiy488wfzwbR6L9QwNDQb4CHGVR5ix9udJjVyykgbLaQLgBc5 --stake-net "4918993.9048 EOS" --stake-cpu "4918993.9047 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111i "10.0000 EOS"
+################################################################################
+# 21/42 producer111j 9635771.7956 EOS
+################################################################################
+producer111j: total funds=9635771.7956 EOS, ram=0.1000 EOS, net=4817880.8478 EOS, cpu=4817880.8478 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111j EOS6iBVEaRDS3mofUJpa8bjD94vohHrsSqqez1wcsWjhPpeNArfBF --stake-net "4817880.8478 EOS" --stake-cpu "4817880.8478 EOS" --buy-ram "0.1000 EOS"   #         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111j","owner":{"threshold":1,"keys":[{"key":"EOS6iBVEaRDS3mofUJpa...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111j","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111j","stake_net_quantity":"4817880.8478 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"9635761.6956 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"9635761.6956 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"9635761.6956 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111j","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111j","quantity":"10.0000 EOS","memo":""}
+#  producer111j <= eosio.token::transfer        {"from":"eosio","to":"producer111j","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111k","owner":{"threshold":1,"keys":[{"key":"EOS8RpmTrNN7eEFno626...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111k","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111k","stake_net_quantity":"4223967.9741 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"8447935.9482 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"8447935.9482 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"8447935.9482 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111k","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111k","quantity":"10.0000 EOS","memo":""}
+#  producer111k <= eosio.token::transfer        {"from":"eosio","to":"producer111k","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111l","owner":{"threshold":1,"keys":[{"key":"EOS8jxiWA9ZHN37csWno...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111l","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111l","stake_net_quantity":"3986396.2676 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"7972792.5353 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"7972792.5353 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"7972792.5353 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111l","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111l","quantity":"10.0000 EOS","memo":""}
+#  producer111l <= eosio.token::transfer        {"from":"eosio","to":"producer111l","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111m","owner":{"threshold":1,"keys":[{"key":"EOS6u4zPBn1EbhNtqmSF...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111m","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111m","stake_net_quantity":"3272499.4014 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"6544998.8028 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"6544998.8028 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"6544998.8028 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111m","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111m","quantity":"10.0000 EOS","memo":""}
+#  producer111m <= eosio.token::transfer        {"from":"eosio","to":"producer111m","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111n","owner":{"threshold":1,"keys":[{"key":"EOS4uUK6JSXyBHNCGYEz...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111n","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111n","stake_net_quantity":"3068081.7081 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"6136163.4162 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"6136163.4162 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"6136163.4162 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111n","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111n","quantity":"10.0000 EOS","memo":""}
+#  producer111n <= eosio.token::transfer        {"from":"eosio","to":"producer111n","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111o","owner":{"threshold":1,"keys":[{"key":"EOS7iKtJ1qCgSaGfC8fq...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111o","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111o","stake_net_quantity":"2885484.5433 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"5770969.0866 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"5770969.0866 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"5770969.0866 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111o","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111o","quantity":"10.0000 EOS","memo":""}
+#  producer111o <= eosio.token::transfer        {"from":"eosio","to":"producer111o","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111p","owner":{"threshold":1,"keys":[{"key":"EOS7KsEiRyppoaxv5yBW...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111p","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111p","stake_net_quantity":"2704233.9842 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"5408467.9685 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"5408467.9685 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"5408467.9685 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111p","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111p","quantity":"10.0000 EOS","memo":""}
+#  producer111p <= eosio.token::transfer        {"from":"eosio","to":"producer111p","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111q","owner":{"threshold":1,"keys":[{"key":"EOS5kiGwBZQgvY8WibiA...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111q","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111q","stake_net_quantity":"2470951.7596 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"4941903.5193 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"4941903.5193 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"4941903.5193 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111q","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111q","quantity":"10.0000 EOS","memo":""}
+#  producer111q <= eosio.token::transfer        {"from":"eosio","to":"producer111q","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111r","owner":{"threshold":1,"keys":[{"key":"EOS66ncp9xAzdCaAggUD...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111r","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111r","stake_net_quantity":"2385270.6110 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"4770541.2221 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"4770541.2221 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"4770541.2221 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111r","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111r","quantity":"10.0000 EOS","memo":""}
+#  producer111r <= eosio.token::transfer        {"from":"eosio","to":"producer111r","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111s","owner":{"threshold":1,"keys":[{"key":"EOS8VPgtZmjHmPXrSmY2...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111s","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111s","stake_net_quantity":"2297882.7725 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"4595765.5450 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"4595765.5450 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"4595765.5450 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111s","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111s","quantity":"10.0000 EOS","memo":""}
+#  producer111s <= eosio.token::transfer        {"from":"eosio","to":"producer111s","quantity":"10.0000 EOS","memo":""}
+
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111j "10.0000 EOS"
+################################################################################
+# 22/42 producer111k 8447946.0482 EOS
+################################################################################
+producer111k: total funds=8447946.0482 EOS, ram=0.1000 EOS, net=4223967.9741 EOS, cpu=4223967.9741 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111k EOS8RpmTrNN7eEFno626tNutAKJbJ3TbMMyHi9sbmpU9t4vEYDAYM --stake-net "4223967.9741 EOS" --stake-cpu "4223967.9741 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111k "10.0000 EOS"
+################################################################################
+# 23/42 producer111l 7972802.6353 EOS
+################################################################################
+producer111l: total funds=7972802.6353 EOS, ram=0.1000 EOS, net=3986396.2676 EOS, cpu=3986396.2677 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111l EOS8jxiWA9ZHN37csWnoShEbs8tvgtYxt2UN4ZtMBXhGJRk8tQJqR --stake-net "3986396.2676 EOS" --stake-cpu "3986396.2677 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111l "10.0000 EOS"
+################################################################################
+# 24/42 producer111m 6545008.9028 EOS
+################################################################################
+producer111m: total funds=6545008.9028 EOS, ram=0.1000 EOS, net=3272499.4014 EOS, cpu=3272499.4014 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111m EOS6u4zPBn1EbhNtqmSFgUhoo1ZHb1je2qUskRgk4jUe2nUfpFXLP --stake-net "3272499.4014 EOS" --stake-cpu "3272499.4014 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111m "10.0000 EOS"
+################################################################################
+# 25/42 producer111n 6136173.5162 EOS
+################################################################################
+producer111n: total funds=6136173.5162 EOS, ram=0.1000 EOS, net=3068081.7081 EOS, cpu=3068081.7081 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111n EOS4uUK6JSXyBHNCGYEzrZzepkMSHzJsaXBAHFsieGGQ1Syzpxy11 --stake-net "3068081.7081 EOS" --stake-cpu "3068081.7081 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111n "10.0000 EOS"
+################################################################################
+# 26/42 producer111o 5770979.1866 EOS
+################################################################################
+producer111o: total funds=5770979.1866 EOS, ram=0.1000 EOS, net=2885484.5433 EOS, cpu=2885484.5433 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111o EOS7iKtJ1qCgSaGfC8fquHquQYZmi43RQTkNWn68ggCTD5gUZjmYw --stake-net "2885484.5433 EOS" --stake-cpu "2885484.5433 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111o "10.0000 EOS"
+################################################################################
+# 27/42 producer111p 5408478.0685 EOS
+################################################################################
+producer111p: total funds=5408478.0685 EOS, ram=0.1000 EOS, net=2704233.9842 EOS, cpu=2704233.9843 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111p EOS7KsEiRyppoaxv5yBW666b3MpDRq7FpQBttU2UUher5Ur2ke3pB --stake-net "2704233.9842 EOS" --stake-cpu "2704233.9843 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111p "10.0000 EOS"
+################################################################################
+# 28/42 producer111q 4941913.6193 EOS
+################################################################################
+producer111q: total funds=4941913.6193 EOS, ram=0.1000 EOS, net=2470951.7596 EOS, cpu=2470951.7597 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111q EOS5kiGwBZQgvY8WibiAprDbXZF1KmgEgWzwfQbAP6LFDLm5PHkyH --stake-net "2470951.7596 EOS" --stake-cpu "2470951.7597 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111q "10.0000 EOS"
+################################################################################
+# 29/42 producer111r 4770551.3221 EOS
+################################################################################
+producer111r: total funds=4770551.3221 EOS, ram=0.1000 EOS, net=2385270.6110 EOS, cpu=2385270.6111 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111r EOS66ncp9xAzdCaAggUDChFMq9YX9wfAJQmN5uMdxf8APV4ecqaZV --stake-net "2385270.6110 EOS" --stake-cpu "2385270.6111 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111r "10.0000 EOS"
+################################################################################
+# 30/42 producer111s 4595775.6450 EOS
+################################################################################
+producer111s: total funds=4595775.6450 EOS, ram=0.1000 EOS, net=2297882.7725 EOS, cpu=2297882.7725 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111s EOS8VPgtZmjHmPXrSmY2Mita3zevnaKDHPiiyJHTQPbf4cMdA3EiK --stake-net "2297882.7725 EOS" --stake-cpu "2297882.7725 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111s "10.0000 EOS"
+################################################################################
+# 31/42 producer111t 2370325.7824 EOS
+################################################################################
+producer111t: total funds=2370325.7824 EOS, ram=0.1000 EOS, net=1185157.8412 EOS, cpu=1185157.8412 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111t EOS6wLPhQzGE96dMNXZxSN9GFnNtHNXY5q6CZ1BY4CizWScLvHCH6 --stake-net "1185157.8412 EOS" --stake-cpu "1185157.8412 EOS" --buy-ram "0.1000 EOS"   #         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111t","owner":{"threshold":1,"keys":[{"key":"EOS6wLPhQzGE96dMNXZx...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111t","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111t","stake_net_quantity":"1185157.8412 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"2370315.6824 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"2370315.6824 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"2370315.6824 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111t","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111t","quantity":"10.0000 EOS","memo":""}
+#  producer111t <= eosio.token::transfer        {"from":"eosio","to":"producer111t","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111u","owner":{"threshold":1,"keys":[{"key":"EOS7M3GEpdYZhWhKaeht...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111u","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111u","stake_net_quantity":"1154630.9481 EOS","stake_cpu_quantit...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"2309261.8962 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"2309261.8962 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"2309261.8962 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111u","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111u","quantity":"10.0000 EOS","memo":""}
+#  producer111u <= eosio.token::transfer        {"from":"eosio","to":"producer111u","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111v","owner":{"threshold":1,"keys":[{"key":"EOS83fUneyFirnM82JT6...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111v","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111v","stake_net_quantity":"926247.2886 EOS","stake_cpu_quantity...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1852494.5771 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1852494.5771 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1852494.5771 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111v","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111v","quantity":"10.0000 EOS","memo":""}
+#  producer111v <= eosio.token::transfer        {"from":"eosio","to":"producer111v","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111w","owner":{"threshold":1,"keys":[{"key":"EOS7rGbRupx3EkQo7dTc...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111w","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111w","stake_net_quantity":"857132.2596 EOS","stake_cpu_quantity...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1714264.5191 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1714264.5191 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1714264.5191 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111w","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111w","quantity":"10.0000 EOS","memo":""}
+#  producer111w <= eosio.token::transfer        {"from":"eosio","to":"producer111w","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111x","owner":{"threshold":1,"keys":[{"key":"EOS7Xk7EhYdvWds1qkfd...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111x","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111x","stake_net_quantity":"642157.8940 EOS","stake_cpu_quantity...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1284315.7881 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1284315.7881 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1284315.7881 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111x","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111x","quantity":"10.0000 EOS","memo":""}
+#  producer111x <= eosio.token::transfer        {"from":"eosio","to":"producer111x","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111y","owner":{"threshold":1,"keys":[{"key":"EOS8erdpbAGK1Xbuz2zd...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111y","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111y","stake_net_quantity":"625335.3028 EOS","stake_cpu_quantity...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1250670.6056 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1250670.6056 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1250670.6056 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111y","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111y","quantity":"10.0000 EOS","memo":""}
+#  producer111y <= eosio.token::transfer        {"from":"eosio","to":"producer111y","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer111z","owner":{"threshold":1,"keys":[{"key":"EOS64UfKJXespdvq4uYt...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer111z","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer111z","stake_net_quantity":"618364.5460 EOS","stake_cpu_quantity...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1236729.0921 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1236729.0921 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"1236729.0921 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer111z","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer111z","quantity":"10.0000 EOS","memo":""}
+#  producer111z <= eosio.token::transfer        {"from":"eosio","to":"producer111z","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer1111","owner":{"threshold":1,"keys":[{"key":"EOS7DUtP3y2yqeabTYav...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer1111","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer1111","stake_net_quantity":"451908.3270 EOS","stake_cpu_quantity...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"903816.6540 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"903816.6540 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"903816.6540 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer1111","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer1111","quantity":"10.0000 EOS","memo":""}
+#  producer1111 <= eosio.token::transfer        {"from":"eosio","to":"producer1111","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer1112","owner":{"threshold":1,"keys":[{"key":"EOS6K1vpE6XAX39kKAu2...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer1112","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer1112","stake_net_quantity":"291281.2876 EOS","stake_cpu_quantity...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"582562.5751 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"582562.5751 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"582562.5751 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer1112","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer1112","quantity":"10.0000 EOS","memo":""}
+#  producer1112 <= eosio.token::transfer        {"from":"eosio","to":"producer1112","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer1113","owner":{"threshold":1,"keys":[{"key":"EOS7ogfqTFzUe97Rr6ta...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer1113","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer1113","stake_net_quantity":"208203.0054 EOS","stake_cpu_quantity...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"416406.0108 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"416406.0108 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"416406.0108 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer1113","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer1113","quantity":"10.0000 EOS","memo":""}
+#  producer1113 <= eosio.token::transfer        {"from":"eosio","to":"producer1113","quantity":"10.0000 EOS","memo":""}
+
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111t "10.0000 EOS"
+################################################################################
+# 32/42 producer111u 2309271.9962 EOS
+################################################################################
+producer111u: total funds=2309271.9962 EOS, ram=0.1000 EOS, net=1154630.9481 EOS, cpu=1154630.9481 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111u EOS7M3GEpdYZhWhKaehthCfbyQBZfHwxDbZ9ewEGysscchkHv2WCq --stake-net "1154630.9481 EOS" --stake-cpu "1154630.9481 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111u "10.0000 EOS"
+################################################################################
+# 33/42 producer111v 1852504.6771 EOS
+################################################################################
+producer111v: total funds=1852504.6771 EOS, ram=0.1000 EOS, net=926247.2886 EOS, cpu=926247.2885 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111v EOS83fUneyFirnM82JT6PxgbJp5ZMxj757YJDQLFPQHKvaezRNDoX --stake-net "926247.2886 EOS" --stake-cpu "926247.2885 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111v "10.0000 EOS"
+################################################################################
+# 34/42 producer111w 1714274.6191 EOS
+################################################################################
+producer111w: total funds=1714274.6191 EOS, ram=0.1000 EOS, net=857132.2596 EOS, cpu=857132.2595 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111w EOS7rGbRupx3EkQo7dTcE9Ryx6XnEeNSEHwFABveDGtN7wUK4Xn9Q --stake-net "857132.2596 EOS" --stake-cpu "857132.2595 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111w "10.0000 EOS"
+################################################################################
+# 35/42 producer111x 1284325.8881 EOS
+################################################################################
+producer111x: total funds=1284325.8881 EOS, ram=0.1000 EOS, net=642157.8940 EOS, cpu=642157.8941 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111x EOS7Xk7EhYdvWds1qkfdiTaaXYJyupJRm9Ufj5dba6QiYPqQT57hU --stake-net "642157.8940 EOS" --stake-cpu "642157.8941 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111x "10.0000 EOS"
+################################################################################
+# 36/42 producer111y 1250680.7056 EOS
+################################################################################
+producer111y: total funds=1250680.7056 EOS, ram=0.1000 EOS, net=625335.3028 EOS, cpu=625335.3028 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111y EOS8erdpbAGK1Xbuz2zdxTY7Km2wHZfL6znXn1ijFJLPn1AR2ZzZx --stake-net "625335.3028 EOS" --stake-cpu "625335.3028 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111y "10.0000 EOS"
+################################################################################
+# 37/42 producer111z 1236739.1921 EOS
+################################################################################
+producer111z: total funds=1236739.1921 EOS, ram=0.1000 EOS, net=618364.5460 EOS, cpu=618364.5461 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer111z EOS64UfKJXespdvq4uYtN4rKEuSMuqRXq6rXaNkH8VCXP7iE1Bjdg --stake-net "618364.5460 EOS" --stake-cpu "618364.5461 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer111z "10.0000 EOS"
+################################################################################
+# 38/42 producer1111 903826.7540 EOS
+################################################################################
+producer1111: total funds=903826.7540 EOS, ram=0.1000 EOS, net=451908.3270 EOS, cpu=451908.3270 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer1111 EOS7DUtP3y2yqeabTYavbuFvA5yfSLM1fg7t3JVRr4dMuEJ4GZWZS --stake-net "451908.3270 EOS" --stake-cpu "451908.3270 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer1111 "10.0000 EOS"
+################################################################################
+# 39/42 producer1112 582572.6751 EOS
+################################################################################
+producer1112: total funds=582572.6751 EOS, ram=0.1000 EOS, net=291281.2876 EOS, cpu=291281.2875 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer1112 EOS6K1vpE6XAX39kKAu2tBD6jJ8XpQzjWhC3X92duyQNBvdrk2zmr --stake-net "291281.2876 EOS" --stake-cpu "291281.2875 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer1112 "10.0000 EOS"
+################################################################################
+# 40/42 producer1113 416416.1108 EOS
+################################################################################
+producer1113: total funds=416416.1108 EOS, ram=0.1000 EOS, net=208203.0054 EOS, cpu=208203.0054 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer1113 EOS7ogfqTFzUe97Rr6taa3SmqrqQJujMmjMHgZ72TfPZFXqVWPjSa --stake-net "208203.0054 EOS" --stake-cpu "208203.0054 EOS" --buy-ram "0.1000 EOS"   
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer1113 "10.0000 EOS"
+################################################################################
+# 41/42 producer1114 15390.5395 EOS
+################################################################################
+producer1114: total funds=15390.5395 EOS, ram=0.1000 EOS, net=7690.2198 EOS, cpu=7690.2197 EOS, unstaked=10.0000 EOS
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 system newaccount --transfer eosio producer1114 EOS69tWc1VS6aP2P1D8ryzTiakPAYbV3whbHeWUzfD8QWYuHKqQxk --stake-net "7690.2198 EOS" --stake-cpu "7690.2197 EOS" --buy-ram "0.1000 EOS"   #         eosio <= eosio::newaccount            {"creator":"eosio","name":"producer1114","owner":{"threshold":1,"keys":[{"key":"EOS69tWc1VS6aP2P1D8r...
+#         eosio <= eosio::buyram                {"payer":"eosio","receiver":"producer1114","quant":"0.1000 EOS"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#     eosio.ram <= eosio.token::transfer        {"from":"eosio","to":"eosio.ram","quantity":"0.0995 EOS","memo":"buy ram"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#  eosio.ramfee <= eosio.token::transfer        {"from":"eosio","to":"eosio.ramfee","quantity":"0.0005 EOS","memo":"ram fee"}
+#         eosio <= eosio::delegatebw            {"from":"eosio","receiver":"producer1114","stake_net_quantity":"7690.2198 EOS","stake_cpu_quantity":...
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"15380.4395 EOS","memo":"stake bandwidth"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"15380.4395 EOS","memo":"stake bandwidth"}
+#   eosio.stake <= eosio.token::transfer        {"from":"eosio","to":"eosio.stake","quantity":"15380.4395 EOS","memo":"stake bandwidth"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"producer1114","quantity":"10.0000 EOS","memo":""}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"producer1114","quantity":"10.0000 EOS","memo":""}
+#  producer1114 <= eosio.token::transfer        {"from":"eosio","to":"producer1114","quantity":"10.0000 EOS","memo":""}
+#   eosio.token <= eosio.token::issue           {"to":"bosbosbosbos","quantity":"100000000.0000 BOS","memo":"memo"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"bosbosbosbos","quantity":"100000000.0000 BOS","memo":"memo"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"bosbosbosbos","quantity":"100000000.0000 BOS","memo":"memo"}
+#  bosbosbosbos <= eosio.token::transfer        {"from":"eosio","to":"bosbosbosbos","quantity":"100000000.0000 BOS","memo":"memo"}
+#   eosio.token <= eosio.token::issue           {"to":"bosissuances","quantity":"900000000.0000 BOS","memo":"memo"}
+#   eosio.token <= eosio.token::transfer        {"from":"eosio","to":"bosissuances","quantity":"900000000.0000 BOS","memo":"memo"}
+#         eosio <= eosio.token::transfer        {"from":"eosio","to":"bosissuances","quantity":"900000000.0000 BOS","memo":"memo"}
+#  bosissuances <= eosio.token::transfer        {"from":"eosio","to":"bosissuances","quantity":"900000000.0000 BOS","memo":"memo"}
+#     eosio.eos <= eosio.eos::issue             {"to":"huobipeggeos","quantity":"1000000000.0002 EOSHB","memo":"memo"}
+#     eosio.eos <= eosio.eos::transfer          {"from":"eosio","to":"huobipeggeos","quantity":"1000000000.0002 EOSHB","memo":"memo"}
+#         eosio <= eosio.eos::transfer          {"from":"eosio","to":"huobipeggeos","quantity":"1000000000.0002 EOSHB","memo":"memo"}
+#  huobipeggeos <= eosio.eos::transfer          {"from":"eosio","to":"huobipeggeos","quantity":"1000000000.0002 EOSHB","memo":"memo"}
+#     eosio.eth <= eosio.eth::issue             {"to":"huobipeggeth","quantity":"103999999.99999997 ETHHB","memo":"memo"}
+#     eosio.eth <= eosio.eth::transfer          {"from":"eosio","to":"huobipeggeth","quantity":"103999999.99999997 ETHHB","memo":"memo"}
+#         eosio <= eosio.eth::transfer          {"from":"eosio","to":"huobipeggeth","quantity":"103999999.99999997 ETHHB","memo":"memo"}
+#  huobipeggeth <= eosio.eth::transfer          {"from":"eosio","to":"huobipeggeth","quantity":"103999999.99999997 ETHHB","memo":"memo"}
+#     eosio.btc <= eosio.btc::issue             {"to":"huobipeggbtc","quantity":"17400193.96569974 BTCHB","memo":"memo"}
+#     eosio.btc <= eosio.btc::transfer          {"from":"eosio","to":"huobipeggbtc","quantity":"17400193.96569974 BTCHB","memo":"memo"}
+#         eosio <= eosio.btc::transfer          {"from":"eosio","to":"huobipeggbtc","quantity":"17400193.96569974 BTCHB","memo":"memo"}
+#  huobipeggbtc <= eosio.btc::transfer          {"from":"eosio","to":"huobipeggbtc","quantity":"17400193.96569974 BTCHB","memo":"memo"}
+#     eosio.eos <= eosio.eos::transfer          {"from":"huobipeggeos","to":"eoshuobipool","quantity":"236766338.3638 EOSHB","memo":"memo"}
+#  huobipeggeos <= eosio.eos::transfer          {"from":"huobipeggeos","to":"eoshuobipool","quantity":"236766338.3638 EOSHB","memo":"memo"}
+#  eoshuobipool <= eosio.eos::transfer          {"from":"huobipeggeos","to":"eoshuobipool","quantity":"236766338.3638 EOSHB","memo":"memo"}
+
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 transfer eosio producer1114 "10.0000 EOS"
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio.token issue '["bosbosbosbos", "100000000.0000 BOS", "memo"]' -p eosio
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio.token issue '["bosissuances", "900000000.0000 BOS", "memo"]' -p eosio
+args.min_producer_funds:  1000.0
+args.min_producer_funds:  1000.0
+args.min_producer_funds:  1000.0
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio.eos issue '["huobipeggeos", "1000000000.0002 EOSHB", "memo"]' -p eosio
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio.eth issue '["huobipeggeth", "103999999.99999997 ETHHB", "memo"]' -p eosio
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000 push action eosio.btc issue '["huobipeggbtc", "17400193.96569974 BTCHB", "memo"]' -p eosio
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000  push action eosio.eos transfer '["huobipeggeos", "eoshuobipool", "236766338.3638 EOSHB", "memo"] ' -p huobipeggeos
+bios-boot-tutorial.py: /data4/eeos/build/programs/cleos/cleos --wallet-url http://120.197.130.116:6666 --url http://120.197.130.116:8000  push action eosio.eth transfer '["huobipeggeth", "eoshuobipool", "28613512.02096760 ETHHB", "memo"] ' -p huobipeggeth
+bios-boot-tutorial.py: exiting because of error
